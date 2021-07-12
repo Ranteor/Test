@@ -13,5 +13,5 @@ curl -w  "dnslookup: %{time_namelookup} | "`
          `"TTFB: %{time_starttransfer} | "`
          `"Total time: %{time_total} | "`
          `"Size: %{size_download}\n"  https://00.img.avito.st/image/1/1cs1qbaxeSIDHvsvE_qxrtcKeSaJCMg  ||  https://68.img.avito.st/image/1/rS2IB7axAcS-sIPJ3gH0BXGkAcA0pgvG
-sleep 1
+sleep 10
 done
