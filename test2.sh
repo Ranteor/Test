@@ -15,4 +15,3 @@ if [[ $age -ge 0 ]] && [[ $age -lt 12 ]] ; then
     else
     echo "Вы старый" 
 fi
-echo "HI"
