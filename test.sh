@@ -2,23 +2,12 @@
 set -eou pipefail
 while true
 do
-echo "======="
-echo "Connect to:https://00.img.avito.st/image/1/1cs1qbaxeSIDHvsvE_qxrtcKeSaJCMg"
-curl -w  "dnslookup: %{time_namelookup} | "`
-         `"Connect: %{time_connect} | "`
-         `"Appconnect: %{time_appconnect} | "`
-         `"Pretransfer: %{time_pretransfer} | "`
-         `"TTFB: %{time_starttransfer} | "`
-         `"Total time: %{time_total} | "`
-         `"Size: %{size_download}\n"  https://00.img.avito.st/image/1/1cs1qbaxeSIDHvsvE_qxrtcKeSaJCMg
-echo "======="
-echo "Connect to:https://68.img.avito.st/image/1/rS2IB7axAcS-sIPJ3gH0BXGkAcA0pgvG"
-curl -w  "dnslookup: %{time_namelookup} | "`
-         `"Connect: %{time_connect} | "`
-         `"Appconnect: %{time_appconnect} | "`
-         `"Pretransfer: %{time_pretransfer} | "`
-         `"TTFB: %{time_starttransfer} | "`
-         `"Total time: %{time_total} | "`
-         `"Size: %{size_download}\n" https://68.img.avito.st/image/1/rS2IB7axAcS-sIPJ3gH0BXGkAcA0pgvG
-sleep 1
+read z
+read n
+echo "URL 1: $z"
+echo "URL 2: $n"
+X=(curl -w %{time_namelookup} %{time_connect} %{time_appconnect} %{time_pretransfer} %{time_starttransfer} -H Connection: close -o /home/pnc -s -v https://00.img.avito.st/image/1/1cs1qbaxeSIDHvsvE_qxrtcKeSaJCM)
+Y=(curl -w %{time_namelookup} %{time_connect} %{time_appconnect} %{time_pretransfer} %{time_starttransfer} -H Connection: close -o /home/pnc -s -v https://68.img.avito.st/image/1/rS2IB7axAcS-sIPJ3gH0BXGkAcA0pgvG)
+echo ${X[@]}
+echo ${Y[@]}
 done
