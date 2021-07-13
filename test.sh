@@ -1,7 +1,6 @@
 #! /bin/bash
 set -eou pipefail
-while true
-do
+for (( i=0; i<=7000; i++ )); do
 read z
 read n
 echo "URL 1: $z"
